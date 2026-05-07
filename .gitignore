@@ -33,3 +33,10 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### Node/npm ###
+node_modules/
+package-lock.json
+dist/
+
+
