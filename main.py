@@ -1,20 +1,18 @@
 #!/usr/bin/env python3
 
-from fastapi import FastAPI
-from fastapi.responses import HTMLResponse
+from flask import Flask, jsonify
 
-app = FastAPI()
+app = Flask(__name__)
 
-@app.get("/")
-async def root():
-    return HTMLResponse(content="Hello from Turing platform")
+@app.route("/")
+def root():
+    return "Hello from Turing platform"
 
-@app.get("/api/hello")
-async def hello():
-    return {"message": "Hello from Turing platform"}
+@app.route("/api/hello")
+def hello():
+    return jsonify({"message": "Hello from Turing platform"})
 
 if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8080)
+    app.run(host="0.0.0.0", port=8080, debug=False)
 
 
