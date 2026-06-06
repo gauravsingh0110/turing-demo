@@ -1,11 +1,12 @@
 import React from 'react';
 import './Dashboard.css';
+import config from '../config';
 
 function Dashboard() {
   return (
     <div className="dashboard">
       <div className="dashboard-header">
-        <h2>Welcome to Turing Dashboard</h2>
+        <h2>Welcome to Turing Dashboard <span className="api-url">(API: {config.apiUrl})</span></h2>
         <p>Monitor your application metrics and performance in real-time</p>
       </div>
       <div className="quick-stats">
