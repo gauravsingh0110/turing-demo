@@ -47,6 +47,7 @@ module.exports = {
     port: 3000,
     hot: true,
     historyApiFallback: true,
+    allowedHosts: 'all',
   },
   optimization: {
     splitChunks: {

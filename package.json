@@ -25,7 +25,7 @@
   "scripts": {
     "start": "webpack serve --mode development",
     "build": "webpack --mode production",
-    "serve": "node -e \"console.log('=== Environment Variables ==='); const fs=require('fs'); const env=require('dotenv').config({path:'.env'}).parsed||{}; Object.entries(env).filter(([k])=>k.startsWith('REACT_APP_')||k==='NODE_ENV').forEach(([k,v])=>console.log(k+': '+v)); console.log('=============================');\" && serve -s dist -l 3000"
+    "serve": "node -e \"console.log('=== Environment Variables ==='); const fs=require('fs'); const env=require('dotenv').config({path:'.env'}).parsed||{}; Object.entries(env).filter(([k])=>k.startsWith('REACT_APP_')||k==='NODE_ENV').forEach(([k,v])=>console.log(k+': '+v)); console.log('=============================');\" && serve -s dist -l 3000 --no-request-logging"
   },
   "browserslist": {
     "production": [
